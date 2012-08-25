@@ -91,7 +91,7 @@ class Walker(object):
 #print dest
 #exit()
 
-urllib.urlretrieve('http://www.pythonchallenge.com/pc/return/wire.png', 'wire.png')
+urllib.urlretrieve('http://huge:file@www.pythonchallenge.com/pc/return/wire.png', 'wire.png')
 image = Image.open('wire.png')
 result = Image.new(image.mode, (100,100))
 walker = Walker(rotates='CW', screw="IN")
