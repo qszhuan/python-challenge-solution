@@ -24,3 +24,6 @@ f4.write(data[3::5])
 f5.write(data[4::5])
 
 #disproportionality without ity
+
+# => http://www.pythonchallenge.com/pc/return/evil3.jpg
+# => http://www.pythonchallenge.com/pc/return/evil4.jpg =>txt file
