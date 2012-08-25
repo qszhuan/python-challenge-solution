@@ -19,3 +19,6 @@ image.save('result.jpg')
 phonebook_url = 'http://huge:file@www.pythonchallenge.com/pc/phonebook.php'
 urllib.urlretrieve(phonebook_url, 'phonebook.php')
 
+import xmlrpclib
+server = xmlrpclib.Server('http://www.pythonchallenge.com/pc/phonebook.php')
+print server.phone('Bert')
