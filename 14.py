@@ -79,8 +79,6 @@ class Walker(object):
         return (self.i, self.j)
         
 ##########################################################################################
-#urllib.urlretrieve('http://www.pythonchallenge.com/pc/return/wire.png', 'wire.png')
-
 #walker = Walker(3,3)
 #src = [[1,2,3],[4,5,6],[7,8,9]]
 #dest = []
@@ -92,6 +90,8 @@ class Walker(object):
 #    dest.append(src[pos[0]][pos[1]])
 #print dest
 #exit()
+
+urllib.urlretrieve('http://www.pythonchallenge.com/pc/return/wire.png', 'wire.png')
 image = Image.open('wire.png')
 result = Image.new(image.mode, (100,100))
 walker = Walker(rotates='CW', screw="IN")
@@ -107,3 +107,7 @@ while True:
     index = index + 1
 
 result.save('result.png')
+
+result2 = Image.new(image.mode, (100,100))
+result2.putdata(image.getdata())
+result2.save('result2.png')
