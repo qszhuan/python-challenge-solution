@@ -12,16 +12,7 @@ gfx = urllib.urlretrieve('http://huge:file@www.pythonchallenge.com/pc/return/evi
 
 data = open(gfx).read()
 
-f1 = open('1.jpeg', 'w')
-f2 = open('2.jpeg', 'w')
-f3 = open('3.jpeg', 'w')
-f4 = open('4.jpeg', 'w')
-f5 = open('5.jpeg', 'w')
-f1.write(data[::5])
-f2.write(data[1::5]) 
-f3.write(data[2::5])
-f4.write(data[3::5])
-f5.write(data[4::5])
+[open('%d.jpeg' % i, 'w').write(data[i::5]) for i in range(5)]
 
 #disproportionality without ity
 
