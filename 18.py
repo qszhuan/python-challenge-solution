@@ -21,4 +21,8 @@ pprint.pprint(list(diffs))
 
 pngs = [''.join(filter(lambda l: l[0] == d, diffs)) for d in " -+"]
 print pngs
+import codecs, re
+def unhex(s): 
+    return codecs.getdecoder('hex')(re.sub('[^0-9a-fA-F]', '', s))[0]
 
+for i in range(len(pngs)): open('delta%d.png' % (i + 2), 'wb').write(unhex(pngs[i]))
