@@ -1,2 +1,6 @@
 *.jpeg
 *.png
+.DS_Store
+*.gif
+*.gz
+*.bz
